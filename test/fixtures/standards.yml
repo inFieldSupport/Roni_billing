@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  standard_type: MyString
+  standard_rate: 1.5
+  active_users: 1
+  registered_users: 1
+  client: one
+
+two:
+  standard_type: MyString
+  standard_rate: 1.5
+  active_users: 1
+  registered_users: 1
+  client: two

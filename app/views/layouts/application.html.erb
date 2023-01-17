@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Billing</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+  </head>
+
+  <body >
+    <main x-data="layout">
+    <% if current_user %>
+    <%= render "layouts/navbar" %>
+    <%end %>
+    <div class="flex">
+    <% if current_user %>
+      <%= render "layouts/sidebar" %>
+      <%end%>
+      <div class="w-full p-4">
+      <%= yield %>
+      </div>
+    </div>
+    </main>
+    <script>
+    document.addEventListener("alpine:init", () => {
+        Alpine.data("layout", () => ({
+            profileOpen: false,
+            asideOpen: true,
+        }));
+    });
+</script>
+  </body>
+</html>
