@@ -13,4 +13,8 @@ RSpec.describe User, type: :model do
     end
 
   end
+  describe "Associations" do
+    it { should belong_to(:client) }
+    
+  end
 end

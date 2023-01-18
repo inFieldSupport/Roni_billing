@@ -1,24 +1,56 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Github
+- Ruby 3.1.2
+- Rails 7.0.4
 
-* Ruby version
+##### 1. Clone the repository
 
-* System dependencies
+```bash
+git clone https://github.com/inFieldSupport/Roni_billing.git
+```
 
-* Configuration
 
-* Database creation
+##### 2. Install dependencies
 
-* Database initialization
+```ruby
+bundle install
+```
 
-* How to run the test suite
+##### 3. Configure database.yml file
 
-* Services (job queues, cache servers, search engines, etc.)
+username: your_postgres_username
+password: your_postgres_password
 
-* Deployment instructions
 
-* ...
+##### 4. Create the database 
+
+Run the following command to create the database.
+
+```ruby
+rails db:create
+```
+
+Migrate.
+
+```ruby
+rails db:migrate
+```
+
+Seed your database.
+
+```ruby
+rails db:seed
+```
+
+##### 5. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000

@@ -1,0 +1,64 @@
+
+            <header class=" px-5 py-4 border-b border-gray-100 ">
+                <h2 class="font-semibold text-gray-800 mt-2">Users</h2>
+              
+            </header>
+            <div class="p-3 ">
+                <div class="overflow-y-auto  max-h-96 ">
+                    <table class="table-auto w-full border-spacing-y-6 border-separate ">
+                        <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                            <tr>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Type</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Rate</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Registered</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-center">Active</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
+                                <div class="font-semibold text-center">Total Amount</div>
+                            </th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                        <% @users.each do |user| %>
+                            <tr >
+                                <td class="p-2 whitespace-nowrap mt-4">
+                                    <div class="flex items-center">
+        
+                                        <div class="font-medium text-gray-800"><%= user.user_type%></div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-left"><%= user.user_rate%>$</div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-left ">N/A</div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class=" text-center text-sm">
+                                    <%= user.active_users %>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                <div class=" text-center text-sm">
+                                <%= ((user.active_users)*(user.user_rate)).round(2) %> $
+                                </div>
+                            </td>
+                            </tr>
+                            
+                            <%end%>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer class="flex justify-between px-5 py-4 border-b border-gray-100 ">
+            <h2 class="font-semibold text-gray-800 mt-2">Total</h2>
+            <h2 class="font-semibold text-gray-800 mt-2"><%= @client.calculate_user_bill(@client)%> $</h2>
+          
+        </footer>

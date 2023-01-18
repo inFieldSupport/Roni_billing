@@ -1,0 +1,34 @@
+user_type,user_rate,active_users,company_name
+Admin,22.40,34,A&G
+Dispacher,22.40,1,A&G
+Mechanic,22.40,3,A&G
+Office Staff,8.96,65,A&G
+Sub Contractor,22.4,3,A&G
+Technician,22.4,151,A&G
+Admin,40.32,3,Custom Brands (Eclipse)
+Technician,40.32,11,Custom Brands (Eclipse)
+Consumers,0,1721,Custom Brands (Eclipse)
+Admin,36.00,2,Eastwing
+Sub Contractor,36.00,0,Eastwing
+Technician,36.00,5,Eastwing
+Admin,40.32,7,LUMAR Fire
+Dispacher,40.32,1,LUMAR Fire
+Technician,11.20,68,LUMAR Fire
+Admin,36.00,3,MC Mech
+Technician,36.00,13,MC Mech
+Admin,24.64,10,Mobile Mech
+Sub Contractor,24.64,3,Mobile Mech
+Technician,24.64,19,Mobile Mech
+Admin,24.64,2,ORHMA
+Consumers,0,200,ORHMA
+Admin,36.00,2,PPL Aquatic
+Sub Contractor,36.00,15,PPL Aquatic
+Admin,28.00,3,Sun Mech
+Sub Contractor,28.00,7,Sun Mech
+Admin,40.32,8,Vics Group
+Sub Contractor,40.32,0,Vics Group
+Technician,0,7,Vics Group
+Admin,0,2,Daniels
+Admin,24.64,2,Talize Inc
+Technician,24.64,0,Talize Inc
+Admin,0,4,ventureLAB
