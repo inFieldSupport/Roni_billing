@@ -1,5 +1,5 @@
 
-
+require 'faker'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -11,7 +11,10 @@ require 'csv'
 CSV.foreach(Rails.root.join('lib/csv/clients.csv'), headers: true) do |row|
   
   Client.create({
-    company_name: row[0]
+    company_name: row[0],
+    name: Faker::Name.name,
+    address: Faker::Address.full_address,
+    email: "client-#{row[1]}@gmail.com"
   })
 end
 CSV.foreach(Rails.root.join('lib/csv/user.csv'), headers: true) do |row|

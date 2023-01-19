@@ -1,16 +1,16 @@
-<div class="w-full  mx-auto bg-white shadow-lg rounded-lg border border-gray-200 ">
-            <header class=" flex justify-between px-5 py-4 border-b border-gray-100">
-                <h2 class="font-semibold text-gray-800 mt-2">Clients</h2>
+<div class="w-10/12  mx-auto bg-gray-100 shadow-lg rounded-lg border border-blue-700 mt-12 mx-4 ">
+            <header class=" flex justify-between px-5 py-4 border-b  bg-gradient-to-r from-blue-700 to-blue-500 border-gray-100">
+                <h2 class="font-bold  mt-2 text-white">Clients</h2>
                 <%= form_with scope: :client, url: clients_path, method: :get, local: true,data:{turbo: false},class:"flex justify-between" do |f| %>
                     <%= f.text_field :company_name, placeholder:"Company name", class:" block w-full border-none md-white focus:bg-gray-100 focus:border-none rounded-xl shadow-lg mr-4" %>
-                    <%= f.submit 'Search',class:"bg-orange-400 w-1/2  rounded-xl text-white mr-2" %>
+                    <%= f.submit 'Search',class:"bg-white w-1/2  rounded-xl text-black mr-2" %>
                     <%= f.submit 'All',class:"bg-black w-1/2  rounded-xl text-white " %>
                     <%end%>
             </header>
             <div class="p-3">
-                <div class="overflow-y-auto max-h-96">
-                    <table class="table-auto w-full border-spacing-y-6 border-separate  ">
-                        <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                <div class="overflow-y-auto " style="max-height:400px">
+                    <table class="table-auto w-full border-spacing-y-6 border-separate h-3/4 ">
+                        <thead class="text-xs font-semibold uppercase text-white bg-blue-700">
                             <tr>
                                 <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Company Name</div>

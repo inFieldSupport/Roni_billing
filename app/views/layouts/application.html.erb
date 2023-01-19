@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
   </head>
 
-  <body class="h-full bg-gray-100">
+  <body style="max-height:100vh">
     <main x-data="layout" >
     <% if current_user %>
     <%= render "layouts/navbar" %>
@@ -23,7 +23,7 @@
     <% if current_user %>
       <%= render "layouts/sidebar" %>
       <%end%>
-      <div class="w-full p-4 ">
+      <div class="w-full" style="max-height: 91vh;height:91vh">
       <%= yield %>
       </div>
     </div>

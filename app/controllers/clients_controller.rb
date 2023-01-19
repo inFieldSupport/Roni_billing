@@ -17,6 +17,10 @@ class ClientsController < ApplicationController
         @client = Client.find(params[:id])
         @users = @client.users
         @standards = @client.standards
-
+        @users_bill = @client.calculate_user_bill(@client)
+        @standards_bill = @client.calculate_standard_bill(@client)
+        @subtotal =  @client.calculate_subtotal(@users_bill,@standards_bill)
+        @tax = @client.calculate_tax(@subtotal)
+        @total = @client.calculate_total(@subtotal,@tax)
     end
 end

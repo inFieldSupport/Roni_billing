@@ -1,19 +1,19 @@
-<tr >
+<tr class="hover:text-blue-700" >
                                 <td class="p-2 whitespace-nowrap mt-4">
                                     <div class="flex items-center">
         
-                                        <div class="font-medium text-gray-800"><%= client.company_name%></div>
+                                        <div class="font-semibold "><%= client.company_name%></div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">N/A</div>
+                                    <div class="text-left"><%= client.name%></div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left ">N/A</div>
+                                    <div class="text-left "><%= client.address%></div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class=" text-center text-sm">
-                                    <%= link_to "View",client_path(client),class:"bg-orange-400 p-2  rounded-xl text-white mr-2"%>
+                                    <%= link_to "View",client_path(client),class:"bg-blue-700 p-2  rounded-xl text-white mr-2"%>
                                     </div>
                                 </td>
 </tr>

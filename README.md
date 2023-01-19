@@ -10,6 +10,7 @@ The setups steps expect following tools installed on the system.
 
 ```bash
 git clone https://github.com/inFieldSupport/Roni_billing.git
+cd Roni_billing
 ```
 
 
@@ -21,8 +22,8 @@ bundle install
 
 ##### 3. Configure database.yml file
 
-username: your_postgres_username
-password: your_postgres_password
+- username: your_postgres_username
+- password: your_postgres_password
 
 
 ##### 4. Create the database 
