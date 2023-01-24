@@ -12,18 +12,28 @@
     <%= javascript_importmap_tags %>
     <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+    <style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+</style>
   </head>
 
-  <body style="max-height:100vh">
+  <body class="font-sans" style="max-height:100vh">
     <main x-data="layout" >
+
     <% if current_user %>
     <%= render "layouts/navbar" %>
     <%end %>
     <div class="flex">
     <% if current_user %>
       <%= render "layouts/sidebar" %>
+      
       <%end%>
-      <div class="w-full" style="max-height: 91vh;height:91vh">
+      <div class="bg-gray-100 w-full overflow-y-auto" style="max-height: 91vh;height:91vh">
+      
       <%= yield %>
       </div>
     </div>

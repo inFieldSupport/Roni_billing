@@ -1,20 +1,11 @@
-<tr class="hover:text-blue-700" >
-                                <td class="p-2 whitespace-nowrap mt-4">
-                                    <div class="flex items-center">
-        
-                                        <div class="font-semibold "><%= client.company_name%></div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left"><%= client.name%></div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left "><%= client.address%></div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class=" text-center text-sm">
-                                    <%= link_to "View",client_path(client),class:"bg-blue-700 p-2  rounded-xl text-white mr-2"%>
-                                    </div>
-                                </td>
+
+<tr class="even:bg-gray-100">
+<td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-black font-semibold"><%= client.company_name%></td>
+<td class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= client.name%></td>
+<td class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= client.address%></td>
+<td class="border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">
+    <div class=" text-center text-sm">
+    <%= link_to "View",client_path(client),class:"bg-indigo-600 hover:bg-indigo-700 p-2  rounded-md text-white mr-2"%>
+    </div>
+</td>
 </tr>
-                            

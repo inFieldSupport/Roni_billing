@@ -6,9 +6,9 @@ RSpec.describe SessionsController, type: :routing do
       expect(get: "/signin").to route_to("sessions#new")
     end
     it "routes to #signout" do
-    expect(get: "/signout").to route_to("sessions#logout")
+    expect(delete: "/signout").to route_to("sessions#logout")
   end
-    it "routes to #new" do
+    it "routes to #create" do
       expect(post: "/signin").to route_to("sessions#create")
     end
 

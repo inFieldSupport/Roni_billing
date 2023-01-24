@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ /* tbody  {
+    max-height: 400px;
+    overflow-y: auto;
+    display:block;
+  
+  } */
+  /* thead{
+    position:sticky;
+    top:0
+  } */

@@ -1,73 +1,79 @@
 
-            <header class="h-1/8 px-5 py-4 border-b border-gray-100  bg-gradient-to-r from-blue-700 to-blue-500 rounded-t-lg">
-                <h2 class="font-semibold text-white mt-2">Users</h2>
-              
+            <header class="h-1/12 bg-white   rounded-t-lg flex justify-between">
+                <h2 class="font-semibold  text-left text-xl m-1 p-1">Users</h2>
+
             </header>
-            <div class="p-3 h-3/4 overflow-y-auto">
+            <div class=" h-11/12 overflow-y-auto rounded-lg h-full border border-gray-300">
+            <% if @users.any? %>
               
-                    <table class="table w-full border-spacing-y-4  border-separate " >
-                        <thead class="text-xs font-semibold uppercase text-white bg-blue-700">
-                            <tr>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Type</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Rate</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Registered</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-center">Active</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                <div class="font-semibold text-center">Total Amount</div>
-                            </th>
-                            </th>
-                            <th class="p-2 whitespace-nowrap">
-                            <div class="font-semibold text-center"></div>
-                        </th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm divide-y divide-gray-100">
-                        <% @users.each do |user| %>
-                            <tr >
-                                <td class="p-2 whitespace-nowrap mt-4">
-                                    <div class="flex items-center">
-        
-                                        <div class="font-medium text-gray-800"><%= user.user_type%></div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left"><%= user.user_rate%>$</div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center ">N/A</div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class=" text-center text-sm">
-                                    <%= user.active_users %>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                <div class=" text-center text-sm">
-                                <%= ((user.active_users)*(user.user_rate)).round(2) %> $
-                                </div>
-                            </td>
-                            <td class="p-2 whitespace-nowrap">
-                            <div class=" text-center text-sm">
-                            <%=link_to "Edit",root_path,class:"bg-blue-700 p-2  rounded-xl text-white mr-2" %> 
-                            </div>
-                        </td>
-                            </tr>
-                            
-                            <%end%>
-                    </tbody>
-                    </table>
+            <table class=" table-auto w-full text-sm rounded-lg h-full"  >
+            <thead class="uppercase  bg-gray-200 border border-gray-300 rounded-lg " >
+              <tr>
+                <th class="border-b dark:border-slate-400 font-semibold px-2  py-2   dark:text-slate-200 text-left">Type</th>
+                <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-left">Rate($)</th>
+                <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-left">Registered</th>
+                <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-left">Active</th>
+                <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-center">  Total($)</th>
+                <th class="border-b dark:border-slate-600 font-semibold px-2  py-2   dark:text-slate-200 text-left"></th>
+              </tr>
+            </thead>
+            
+            <tbody class="relative bg-white dark:bg-slate-800   " >
+          
+            <% @users.each do |user| %>
+      
+                <%= render partial: "clients/user", locals:{user: user} %>
+                <%end%>
+            </tbody>
+          </table>
+          <%else%>
+          <h1 class="text-center font-semibold text-xl text-indigo-700">No standards found </h1>
+          <%end%>
                
             </div>
-            <footer class="h-1/8 flex justify-between px-5 py-4 border-b border-gray-100 bg-gradient-to-r from-blue-700 to-blue-500 rounded-b-lg">
-            <h2 class="font-semibold text-white mt-2">Total</h2>
-            <h2 class="font-semibold text-white mt-2"><%= @users_bill %> $</h2>
-          
-        </footer>
+       
+        <script>
+
+function userFunction(id) {
+    
+   
+    
+ 
+    document.getElementById("user-button-"+id).classList.add("hidden")
+    document.getElementById("user-save-"+id).classList.remove("hidden")
+    document.getElementById("user-undo-"+id).classList.remove("hidden")
+   var doc1 = document.getElementById("user-rate-"+id)
+   var doc2 = document.getElementById("user-active-"+id)
+   doc1.disabled = false
+   doc2.disabled = false
+   doc1.classList.remove("border-transparent")
+   doc1.classList.add("border-1")
+   doc1.classList.add("border-indigo-700")
+   doc2.classList.remove("border-transparent")
+   doc2.classList.add("border-1")
+   doc2.classList.add("border-indigo-700")
+
+       }
+       function undoUser(id) {
+    
+   
+    
+ 
+    document.getElementById("user-button-"+id).classList.remove("hidden")
+    document.getElementById("user-save-"+id).classList.add("hidden")
+    document.getElementById("user-undo-"+id).classList.add("hidden")
+   var doc1 = document.getElementById("user-rate-"+id)
+   var doc2 = document.getElementById("user-active-"+id)
+   doc1.disabled = true
+   doc2.disabled = true
+   doc1.classList.add("border-transparent")
+   doc1.classList.remove("border-1")
+   doc1.classList.remove("border-indigo-700")
+   doc2.classList.add("border-transparent")
+   doc2.classList.remove("border-1")
+   doc2.classList.remove("border-indigo-700")
+
+       }
+
+
+</script>

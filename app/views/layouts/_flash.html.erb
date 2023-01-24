@@ -1,0 +1,16 @@
+<% flash.each do |message_type, message| %>
+    <div class="pt-3">
+      <% if message_type == "danger" %>
+        <div id="flash" class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-gray-800 dark:text-red-400" role="alert">
+          <span class="font-semibold font-serif"><%= message %></span>
+       </div>
+      <% end %>
+      <% if message_type == "success" %>
+       <div id="flash" class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-gray-800 dark:text-green-400" role="alert">
+        <span class="font-semibold font-serif"><%= message %></span>
+       </div>
+      <% end %>
+   </div>
+  <% end %>
+  
+  <script type="text/javascript">window.setTimeout("document.getElementById('flash').style.display='none';", 5000); </script>

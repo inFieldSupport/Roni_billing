@@ -13,5 +13,7 @@ RSpec.describe Employee, type: :model do
     it { is_expected.to validate_length_of(:email).is_at_most(255) }
     it { is_expected.to validate_length_of(:password).is_at_least(6) }
   end
- 
+ describe 'Associations' do
+  it { should have_many(:bills) }
+ end
 end

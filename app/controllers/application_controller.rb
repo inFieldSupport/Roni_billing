@@ -18,7 +18,8 @@ class ApplicationController < ActionController::Base
     def log_in(user)
         session[:user_email] = user.email
         @current_user = user
-        redirect_to root_path
+        flash[:succes] = "Signed In successfully"
+        redirect_to clients_path
     end
 
     def logged_in?

@@ -8,7 +8,7 @@ RSpec.describe "Sessions", type: :request do
       employee = Employee.new(name:"Roni",email:"example@gmail.com",password:"password",password_confirmation:"password")
       employee.save
       post signin_path,:params => { :session => { :email => employee.email,:password=>employee.password }} 
-      get logout_path
+      delete logout_path
     end
     it " invalid signin" do 
         get root_path
