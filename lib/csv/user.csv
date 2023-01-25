@@ -5,66 +5,182 @@ Mechanic,22.40,3,A&G,40,January,2023
 Office Staff,8.96,65,A&G,70,January,2023
 Sub Contractor,22.4,3,A&G,20,January,2023
 Technician,22.4,151,A&G,200,January,2023
+Consumers,0,400,A&G,1721,January,2023
 Admin,40.32,3,Custom Brands (Eclipse),10,January,2023
+Dispacher,0,0,Custom Brands (Eclipse),0,January,2023
+Mechanic,0,0,Custom Brands (Eclipse),0,January,2023
+Office Staff,0,0,Custom Brands (Eclipse),0,January,2023
+Sub Contractor,22.4,3,Custom Brands (Eclipse),20,January,2023
 Technician,40.32,11,Custom Brands (Eclipse),40,January,2023
 Consumers,0,1721,Custom Brands (Eclipse),1721,January,2023
 Admin,36.00,2,Eastwing,5,January,2023
+Dispacher,0,0,Eastwing,0,January,2023
+Mechanic,0,0,Eastwing,0,January,2023
+Office Staff,0,0,Eastwing,0,January,2023
 Sub Contractor,36.00,0,Eastwing,10,January,2023
 Technician,36.00,5,Eastwing,40,January,2023
+Consumers,0,400,Eastwing,1721,January,2023
 Admin,40.32,7,LUMAR Fire,40,January,2023
 Dispacher,40.32,1,LUMAR Fire,5,January,2023
+Mechanic,0,0,LUMAR Fire,0,January,2023
+Office Staff,0,65,LUMAR Fire,0,January,2023
+Sub Contractor,0,0,LUMAR Fire,0,January,2023
 Technician,11.20,68,LUMAR Fire,70,January,2023
+Consumers,0,400,LUMAR Fire,1721,January,2023
 Admin,36.00,3,MC Mech,15,January,2023
+Dispacher,0,0,MC Mech,0,January,2023
+Mechanic,0,0,MC Mech,0,January,2023
+Office Staff,0,0,MC Mech,70,January,2023
+Sub Contractor,0,0,MC Mech,20,January,2023
 Technician,36.00,13,MC Mech,40,January,2023
+Consumers,0,400,MC Mech,1721,January,2023
 Admin,24.64,10,Mobile Mech,40,January,2023
+Dispacher,0,0,Mobile Mech,0,January,2023
+Mechanic,0,0,Mobile Mech,0,January,2023
+Office Staff,0,0,Mobile Mech,70,January,2023
 Sub Contractor,24.64,3,Mobile Mech,10,January,2023
 Technician,24.64,19,Mobile Mech,40,January,2023
+Consumers,0,400,Mobile Mech,1721,January,2023
 Admin,24.64,2,ORHMA,9,January,2023
+Dispacher,0,0,ORHMA,0,January,2023
+Mechanic,0,0,ORHMA,0,January,2023
+Office Staff,0,0,ORHMA,70,January,2023
+Sub Contractor,0,0,ORHMA,10,January,2023
+Technician,0,0,ORHMA,40,January,2023
 Consumers,0,200,ORHMA,200,January,2023
 Admin,36.00,2,PPL Aquatic,4,January,2023
+Dispacher,0,0,PPL Aquatic,0,January,2023
+Mechanic,0,0,PPL Aquatic,0,January,2023
+Office Staff,0,0,PPL Aquatic,70,January,2023
 Sub Contractor,36.00,15,PPL Aquatic,40,January,2023
+Technician,0,0,PPL Aquatic,40,January,2023
+Consumers,0,200,PPL Aquatic,200,January,2023
 Admin,28.00,3,Sun Mech,20,January,2023
+Dispacher,0,0,Sun Mech,0,January,2023
+Mechanic,0,0,Sun Mech,0,January,2023
+Office Staff,0,0,Sun Mech,70,January,2023
 Sub Contractor,28.00,7,Sun Mech,40,January,2023
+Technician,0,0,Sun Mech,40,January,2023
+Consumers,0,200,Sun Mech,200,January,2023
 Admin,40.32,8,Vics Group,40,January,2023
+Dispacher,0,0,Vics Group,0,January,2023
+Mechanic,0,0,Vics Group,0,January,2023
+Office Staff,0,0,Vics Group,70,January,2023
 Sub Contractor,40.32,0,Vics Group,40,January,2023
 Technician,0,7,Vics Group,30,January,2023
+Consumers,0,200,Vics Group,200,January,2023
 Admin,0,2,Daniels,40,January,2023
+Dispacher,0,0,Daniels,0,January,2023
+Mechanic,0,0,Daniels,0,January,2023
+Office Staff,0,0,Daniels,70,January,2023
+Sub Contractor,0,0,Daniels,40,January,2023
+Technician,0,0,Daniels,30,January,2023
+Consumers,0,200,Daniels,200,January,2023
 Admin,24.64,2,Talize Inc,12,January,2023
+Dispacher,0,0,Talize Inc,0,January,2023
+Mechanic,0,0,Talize Inc,0,January,2023
+Office Staff,0,0,Talize Inc,70,January,2023
+Sub Contractor,0,0,Talize Inc,40,January,2023
 Technician,24.64,0,Talize Inc,10,January,2023
+Consumers,0,200,Talize Inc,200,January,2023
 Admin,0,4,ventureLAB,10,January,2023
+Dispacher,0,0,ventureLAB,0,January,2023
+Mechanic,0,0,ventureLAB,0,January,2023
+Office Staff,0,0,ventureLAB,0,January,2023
+Sub Contractor,0,0,ventureLAB,40,January,2023
+Technician,0,0,ventureLAB,10,January,2023
+Consumers,0,200,ventureLAB,200,January,2023
 Admin,22.40,34,A&G,40,December,2022
 Dispacher,22.40,1,A&G,10,December,2022
 Mechanic,22.40,3,A&G,40,December,2022
 Office Staff,8.96,65,A&G,70,December,2022
 Sub Contractor,22.4,3,A&G,20,December,2022
 Technician,22.4,151,A&G,200,December,2022
+Consumers,0,400,A&G,1721,December,2022
 Admin,40.32,3,Custom Brands (Eclipse),10,December,2022
+Dispacher,0,0,Custom Brands (Eclipse),0,December,2022
+Mechanic,0,0,Custom Brands (Eclipse),0,December,2022
+Office Staff,0,0,Custom Brands (Eclipse),0,December,2022
+Sub Contractor,22.4,3,Custom Brands (Eclipse),20,December,2022
 Technician,40.32,11,Custom Brands (Eclipse),40,December,2022
 Consumers,0,1721,Custom Brands (Eclipse),1721,December,2022
 Admin,36.00,2,Eastwing,5,December,2022
+Dispacher,0,0,Eastwing,0,December,2022
+Mechanic,0,0,Eastwing,0,December,2022
+Office Staff,0,0,Eastwing,0,December,2022
 Sub Contractor,36.00,0,Eastwing,10,December,2022
 Technician,36.00,5,Eastwing,40,December,2022
+Consumers,0,400,Eastwing,1721,December,2022
 Admin,40.32,7,LUMAR Fire,40,December,2022
 Dispacher,40.32,1,LUMAR Fire,5,December,2022
-Technician,14.20,68,LUMAR Fire,70,December,2022
+Mechanic,0,0,LUMAR Fire,0,December,2022
+Office Staff,0,65,LUMAR Fire,0,December,2022
+Sub Contractor,0,0,LUMAR Fire,0,December,2022
+Technician,11.20,68,LUMAR Fire,70,December,2022
+Consumers,0,400,LUMAR Fire,1721,December,2022
 Admin,36.00,3,MC Mech,15,December,2022
+Dispacher,0,0,MC Mech,0,December,2022
+Mechanic,0,0,MC Mech,0,December,2022
+Office Staff,0,0,MC Mech,70,December,2022
+Sub Contractor,0,0,MC Mech,20,December,2022
 Technician,36.00,13,MC Mech,40,December,2022
+Consumers,0,400,MC Mech,1721,December,2022
 Admin,24.64,10,Mobile Mech,40,December,2022
+Dispacher,0,0,Mobile Mech,0,December,2022
+Mechanic,0,0,Mobile Mech,0,December,2022
+Office Staff,0,0,Mobile Mech,70,December,2022
 Sub Contractor,24.64,3,Mobile Mech,10,December,2022
 Technician,24.64,19,Mobile Mech,40,December,2022
-Admin,24.64,10,ORHMA,9,December,2022
+Consumers,0,400,Mobile Mech,1721,December,2022
+Admin,24.64,2,ORHMA,9,December,2022
+Dispacher,0,0,ORHMA,0,December,2022
+Mechanic,0,0,ORHMA,0,December,2022
+Office Staff,0,0,ORHMA,70,December,2022
+Sub Contractor,0,0,ORHMA,10,December,2022
+Technician,0,0,ORHMA,40,December,2022
 Consumers,0,200,ORHMA,200,December,2022
 Admin,36.00,2,PPL Aquatic,4,December,2022
+Dispacher,0,0,PPL Aquatic,0,December,2022
+Mechanic,0,0,PPL Aquatic,0,December,2022
+Office Staff,0,0,PPL Aquatic,70,December,2022
 Sub Contractor,36.00,15,PPL Aquatic,40,December,2022
+Technician,0,0,PPL Aquatic,40,December,2022
+Consumers,0,200,PPL Aquatic,200,December,2022
 Admin,28.00,3,Sun Mech,20,December,2022
+Dispacher,0,0,Sun Mech,0,December,2022
+Mechanic,0,0,Sun Mech,0,December,2022
+Office Staff,0,0,Sun Mech,70,December,2022
 Sub Contractor,28.00,7,Sun Mech,40,December,2022
-Admin,40.32,15,Vics Group,40,December,2022
-Sub Contractor,40.32,5,Vics Group,40,December,2022
+Technician,0,0,Sun Mech,40,December,2022
+Consumers,0,200,Sun Mech,200,December,2022
+Admin,40.32,8,Vics Group,40,December,2022
+Dispacher,0,0,Vics Group,0,December,2022
+Mechanic,0,0,Vics Group,0,December,2022
+Office Staff,0,0,Vics Group,70,December,2022
+Sub Contractor,40.32,0,Vics Group,40,December,2022
 Technician,0,7,Vics Group,30,December,2022
+Consumers,0,200,Vics Group,200,December,2022
 Admin,0,2,Daniels,40,December,2022
-Admin,23.64,2,Talize Inc,12,December,2022
-Technician,25.64,0,Talize Inc,10,December,2022
-Admin,20.4,4,ventureLAB,10,December,2022
+Dispacher,0,0,Daniels,0,December,2022
+Mechanic,0,0,Daniels,0,December,2022
+Office Staff,0,0,Daniels,70,December,2022
+Sub Contractor,0,0,Daniels,40,December,2022
+Technician,0,0,Daniels,30,December,2022
+Consumers,0,200,Daniels,200,December,2022
+Admin,24.64,2,Talize Inc,12,December,2022
+Dispacher,0,0,Talize Inc,0,December,2022
+Mechanic,0,0,Talize Inc,0,December,2022
+Office Staff,0,0,Talize Inc,70,December,2022
+Sub Contractor,0,0,Talize Inc,40,December,2022
+Technician,24.64,0,Talize Inc,10,December,2022
+Consumers,0,200,Talize Inc,200,December,2022
+Admin,0,4,ventureLAB,10,December,2022
+Dispacher,0,0,ventureLAB,0,December,2022
+Mechanic,0,0,ventureLAB,0,December,2022
+Office Staff,0,0,ventureLAB,0,December,2022
+Sub Contractor,0,0,ventureLAB,40,December,2022
+Technician,0,0,ventureLAB,10,December,2022
+Consumers,0,200,ventureLAB,200,December,2022
 Admin,22.40,34,A&G,40,November,2022
 Dispacher,22.40,1,A&G,10,November,2022
 Mechanic,22.40,3,A&G,40,November,2022
@@ -98,3 +214,94 @@ Admin,0,2,Daniels,40,November,2022
 Admin,24.64,2,Talize Inc,12,November,2022
 Technician,24.64,0,Talize Inc,10,November,2022
 Admin,0,4,ventureLAB,10,November,2022
+Admin,22.40,34,A&G,40,November,2022
+Dispacher,22.40,1,A&G,10,November,2022
+Mechanic,22.40,3,A&G,40,November,2022
+Office Staff,8.96,65,A&G,70,November,2022
+Sub Contractor,22.4,3,A&G,20,November,2022
+Technician,22.4,151,A&G,200,November,2022
+Consumers,0,400,A&G,1721,November,2022
+Admin,40.32,3,Custom Brands (Eclipse),10,November,2022
+Dispacher,0,0,Custom Brands (Eclipse),0,November,2022
+Mechanic,0,0,Custom Brands (Eclipse),0,November,2022
+Office Staff,0,0,Custom Brands (Eclipse),0,November,2022
+Sub Contractor,22.4,3,Custom Brands (Eclipse),20,November,2022
+Technician,40.32,11,Custom Brands (Eclipse),40,November,2022
+Consumers,0,1721,Custom Brands (Eclipse),1721,November,2022
+Admin,36.00,2,Eastwing,5,November,2022
+Dispacher,0,0,Eastwing,0,November,2022
+Mechanic,0,0,Eastwing,0,November,2022
+Office Staff,0,0,Eastwing,0,November,2022
+Sub Contractor,36.00,0,Eastwing,10,November,2022
+Technician,36.00,5,Eastwing,40,November,2022
+Consumers,0,400,Eastwing,1721,November,2022
+Admin,40.32,7,LUMAR Fire,40,November,2022
+Dispacher,40.32,1,LUMAR Fire,5,November,2022
+Mechanic,0,0,LUMAR Fire,0,November,2022
+Office Staff,0,65,LUMAR Fire,0,November,2022
+Sub Contractor,0,0,LUMAR Fire,0,November,2022
+Technician,11.20,68,LUMAR Fire,70,November,2022
+Consumers,0,400,LUMAR Fire,1721,November,2022
+Admin,36.00,3,MC Mech,15,November,2022
+Dispacher,0,0,MC Mech,0,November,2022
+Mechanic,0,0,MC Mech,0,November,2022
+Office Staff,0,0,MC Mech,70,November,2022
+Sub Contractor,0,0,MC Mech,20,November,2022
+Technician,36.00,13,MC Mech,40,November,2022
+Consumers,0,400,MC Mech,1721,November,2022
+Admin,24.64,10,Mobile Mech,40,November,2022
+Dispacher,0,0,Mobile Mech,0,November,2022
+Mechanic,0,0,Mobile Mech,0,November,2022
+Office Staff,0,0,Mobile Mech,70,November,2022
+Sub Contractor,24.64,3,Mobile Mech,10,November,2022
+Technician,24.64,19,Mobile Mech,40,November,2022
+Consumers,0,400,Mobile Mech,1721,November,2022
+Admin,24.64,2,ORHMA,9,November,2022
+Dispacher,0,0,ORHMA,0,November,2022
+Mechanic,0,0,ORHMA,0,November,2022
+Office Staff,0,0,ORHMA,70,November,2022
+Sub Contractor,0,0,ORHMA,10,November,2022
+Technician,0,0,ORHMA,40,November,2022
+Consumers,0,200,ORHMA,200,November,2022
+Admin,36.00,2,PPL Aquatic,4,November,2022
+Dispacher,0,0,PPL Aquatic,0,November,2022
+Mechanic,0,0,PPL Aquatic,0,November,2022
+Office Staff,0,0,PPL Aquatic,70,November,2022
+Sub Contractor,36.00,15,PPL Aquatic,40,November,2022
+Technician,0,0,PPL Aquatic,40,November,2022
+Consumers,0,200,PPL Aquatic,200,November,2022
+Admin,28.00,3,Sun Mech,20,November,2022
+Dispacher,0,0,Sun Mech,0,November,2022
+Mechanic,0,0,Sun Mech,0,November,2022
+Office Staff,0,0,Sun Mech,70,November,2022
+Sub Contractor,28.00,7,Sun Mech,40,November,2022
+Technician,0,0,Sun Mech,40,November,2022
+Consumers,0,200,Sun Mech,200,November,2022
+Admin,40.32,8,Vics Group,40,November,2022
+Dispacher,0,0,Vics Group,0,November,2022
+Mechanic,0,0,Vics Group,0,November,2022
+Office Staff,0,0,Vics Group,70,November,2022
+Sub Contractor,40.32,0,Vics Group,40,November,2022
+Technician,0,7,Vics Group,30,November,2022
+Consumers,0,200,Vics Group,200,November,2022
+Admin,0,2,Daniels,40,November,2022
+Dispacher,0,0,Daniels,0,November,2022
+Mechanic,0,0,Daniels,0,November,2022
+Office Staff,0,0,Daniels,70,November,2022
+Sub Contractor,0,0,Daniels,40,November,2022
+Technician,0,0,Daniels,30,November,2022
+Consumers,0,200,Daniels,200,November,2022
+Admin,24.64,2,Talize Inc,12,November,2022
+Dispacher,0,0,Talize Inc,0,November,2022
+Mechanic,0,0,Talize Inc,0,November,2022
+Office Staff,0,0,Talize Inc,70,November,2022
+Sub Contractor,0,0,Talize Inc,40,November,2022
+Technician,24.64,0,Talize Inc,10,November,2022
+Consumers,0,200,Talize Inc,200,November,2022
+Admin,0,4,ventureLAB,10,November,2022
+Dispacher,0,0,ventureLAB,0,November,2022
+Mechanic,0,0,ventureLAB,0,November,2022
+Office Staff,0,0,ventureLAB,0,November,2022
+Sub Contractor,0,0,ventureLAB,40,November,2022
+Technician,0,0,ventureLAB,10,November,2022
+Consumers,0,200,ventureLAB,200,November,2022

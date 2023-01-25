@@ -4,7 +4,7 @@
          <th  class="  font-semibold text-sm font-normal text-white p-4">
           Date
          </th>
-         <th class=" font-semibold  text-sm font-normal text-slate-700 text-white p-4">
+         <th class=" font-semibold  text-sm font-normal  text-white p-4">
           Description
          </th>
          <th  class=" font-semibold text-sm font-normal  text-white p-4">
@@ -19,7 +19,7 @@
         </tr>
        </thead>
        <tbody>
-       <% @client.users.where(year:@bill.year,month:@bill.month).find_each do |user| %>
+       <% @client.users.where(year:@bill.year,month:@bill.month).where('active_users > 0').where('user_rate > 0').find_each do |user| %>
         <tr class="border-b border-slate-200">
          <td class=" text-sm sm:pl-6 md:pl-0 text-center">
           <div class="font-medium text-slate-700"></div>
@@ -42,7 +42,7 @@
         
         </tr>
         <%end%>
-        <% @client.standards.where(year:@bill.year,month:@bill.month).find_each do |standard| %>
+        <% @client.standards.where(year:@bill.year,month:@bill.month).where('active_users > 0').where('standard_rate > 0').find_each do |standard| %>
           <tr class="border-b border-slate-200">
            <td class=" text-sm sm:pl-6 md:pl-0 text-center">
             <div class="font-medium text-slate-700"></div>

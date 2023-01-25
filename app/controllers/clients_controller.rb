@@ -30,10 +30,23 @@ class ClientsController < ApplicationController
     @months = %w[January February March April May June July August September October November
                  December]
     @years = 2019.upto(DateTime.now.strftime('%Y').to_i).map { |year| year }
-
-
-    return unless params[:search]
-
+    @year = DateTime.now.strftime("%Y")
+    @month = DateTime.now.strftime("%B")
+    if params[:search]
+      if !params[:search][:year] 
+        @year = DateTime.now.strftime("%Y")
+      else
+        @year = params[:search][:year]
+      end
+      if !params[:search][:month] 
+        @month = DateTime.now.strftime("%B")
+      else
+        @month = params[:search][:month]
+      end
+    if "#{@month},#{@year}".to_date > DateTime.now
+      flash[:danger] = "Cannot access upcoming dates"
+     redirect_to session.delete(:previous_request_url)
+    else
     @users = get_users
     @standards = get_standards
     @users_bill = get_user_bill(@client)
@@ -41,6 +54,8 @@ class ClientsController < ApplicationController
     @subtotal = @client.calculate_subtotal(@users_bill, @standards_bill)
     @tax = @client.calculate_tax(@subtotal)
     @total = @client.calculate_total(@subtotal, @tax)
+    end
+  end
   end
 
   private
