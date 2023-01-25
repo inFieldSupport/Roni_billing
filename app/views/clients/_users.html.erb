@@ -34,46 +34,78 @@
        
         <script>
 
-function userFunction(id) {
+function userRateFunction(id) {
     
    
     
  
-    document.getElementById("user-button-"+id).classList.add("hidden")
-    document.getElementById("user-save-"+id).classList.remove("hidden")
-    document.getElementById("user-undo-"+id).classList.remove("hidden")
+    document.getElementById("user-rate-button-"+id).classList.add("hidden")
+    document.getElementById("user-rate-save-"+id).classList.remove("hidden")
+    document.getElementById("user-rate-undo-"+id).classList.remove("hidden")
    var doc1 = document.getElementById("user-rate-"+id)
-   var doc2 = document.getElementById("user-active-"+id)
+   
    doc1.disabled = false
-   doc2.disabled = false
+   
    doc1.classList.remove("border-transparent")
    doc1.classList.add("border-1")
    doc1.classList.add("border-indigo-700")
-   doc2.classList.remove("border-transparent")
-   doc2.classList.add("border-1")
-   doc2.classList.add("border-indigo-700")
+
 
        }
-       function undoUser(id) {
+       function undoUserRate(id) {
     
    
     
  
-    document.getElementById("user-button-"+id).classList.remove("hidden")
-    document.getElementById("user-save-"+id).classList.add("hidden")
-    document.getElementById("user-undo-"+id).classList.add("hidden")
+    document.getElementById("user-rate-button-"+id).classList.remove("hidden")
+    document.getElementById("user-rate-save-"+id).classList.add("hidden")
+    document.getElementById("user-rate-undo-"+id).classList.add("hidden")
    var doc1 = document.getElementById("user-rate-"+id)
-   var doc2 = document.getElementById("user-active-"+id)
+  
    doc1.disabled = true
-   doc2.disabled = true
+
    doc1.classList.add("border-transparent")
    doc1.classList.remove("border-1")
    doc1.classList.remove("border-indigo-700")
-   doc2.classList.add("border-transparent")
-   doc2.classList.remove("border-1")
-   doc2.classList.remove("border-indigo-700")
+
 
        }
+       function userActiveFunction(id) {
+    
+   
+    
+ 
+       document.getElementById("user-active-button-"+id).classList.add("hidden")
+       document.getElementById("user-active-save-"+id).classList.remove("hidden")
+       document.getElementById("user-active-undo-"+id).classList.remove("hidden")
+      var doc1 = document.getElementById("user-active-"+id)
+      
+      doc1.disabled = false
+      
+      doc1.classList.remove("border-transparent")
+      doc1.classList.add("border-1")
+      doc1.classList.add("border-indigo-700")
+   
+   
+          }
+          function undoUserActive(id) {
+       
+      
+       
+    
+       document.getElementById("user-active-button-"+id).classList.remove("hidden")
+       document.getElementById("user-active-save-"+id).classList.add("hidden")
+       document.getElementById("user-active-undo-"+id).classList.add("hidden")
+      var doc1 = document.getElementById("user-active-"+id)
+     
+      doc1.disabled = true
+   
+      doc1.classList.add("border-transparent")
+      doc1.classList.remove("border-1")
+      doc1.classList.remove("border-indigo-700")
+   
+   
+          }
 
 
 </script>

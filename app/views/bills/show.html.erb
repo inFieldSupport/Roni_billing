@@ -37,8 +37,8 @@
      </div>
      <div class="flex flex-col justify-between mr-2">
      <div class="bg-slate-400 text-2xl font-bold text-white uppercase pl-2"> Invoice <%= @bill.id%></div>
-     <div class="bg-slate-400   text-white pl-2 flex"><p class="font-bold text-xl mr-1"> DATE </p> <p class="text-md mr-2 mt-0.5">2023.01.01</p> <p class="font-bold text-xl mr-1"> Terms </p><p class="text-md mr-2 mt-0.5"> Due on receipt</p></div>
-     <div class="bg-slate-400  text-white pl-2 flex"> <p class="font-bold text-xl mr-1">DUE DATE</p> <p class="text-md mr-2 mt-0.5">2023.01.01</p>
+     <div class="bg-slate-400   text-white pl-2 flex"><p class="font-bold text-xl mr-1"> DATE </p> <p class="text-md mr-2 mt-0.5"><%= @bill.created_at.strftime("%Y.%m.%d") %></p> <p class="font-bold text-xl mr-1"> Terms </p><p class="text-md mr-2 mt-0.5"> Due on receipt</p></div>
+     <div class="bg-slate-400  text-white pl-2 flex"> <p class="font-bold text-xl mr-1">DUE DATE</p> <p class="text-md mr-2 mt-0.5"> <%= "#{@bill.month},#{@bill.year}".to_date.strftime("%Y.%m.%d")%> </p>
      </div>
      
      </div>

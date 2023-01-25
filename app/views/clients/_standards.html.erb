@@ -10,7 +10,7 @@
 <tr>
 <th class="border-b dark:border-slate-400 font-semibold px-2  py-2   dark:text-slate-200 text-left">Type</th>
 <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-left">Rate($)</th>
-<th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-left">Registered</th>
+
 <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-left">Active</th>
 <th class="border-b dark:border-slate-600 font-semibold px-2 py-2   dark:text-slate-200 text-center">  Total($)</th>
 <th class="border-b dark:border-slate-600 font-semibold px-2  py-2   dark:text-slate-200 text-left"></th>
@@ -37,44 +37,81 @@
 </div>
 
 <script>
-function standardFunction(id) {
-    document.getElementById("standard-button-"+id).classList.add("hidden")
-    document.getElementById("standard-save-"+id).classList.remove("hidden")
-    document.getElementById("standard-undo-"+id).classList.remove("hidden")
+function standardRateFunction(id) {
+    document.getElementById("standard-rate-button-"+id).classList.add("hidden")
+    document.getElementById("standard-rate-save-"+id).classList.remove("hidden")
+    document.getElementById("standard-rate-undo-"+id).classList.remove("hidden")
    var doc1 = document.getElementById("standard-rate-"+id)
-   var doc2 = document.getElementById("standard-active-"+id)
+  
    doc1.disabled = false
-   doc2.disabled = false
+   
    doc1.classList.remove("border-transparent")
    doc1.classList.add("border-1")
-   doc2.classList.remove("border-transparent")
-   doc2.classList.add("border-1")
+   
+  
    doc1.classList.add("border-indigo-700")
-   doc2.classList.add("border-indigo-700")
+ 
   
        }
-       function undoStandard(id) {
+       function undoStandardRate(id) {
     
    
     
  
-       document.getElementById("standard-button-"+id).classList.remove("hidden")
-       document.getElementById("standard-save-"+id).classList.add("hidden")
-       document.getElementById("standard-undo-"+id).classList.add("hidden")
-      var doc1 = document.getElementById("standard-rate-"+id)
+       document.getElementById("standard-rate-button-"+id).classList.remove("hidden")
+       document.getElementById("standard-rate-save-"+id).classList.add("hidden")
+       document.getElementById("standard-rate-undo-"+id).classList.add("hidden")
+      
       var doc2 = document.getElementById("standard-active-"+id)
-      doc1.disabled = true
+      
       doc2.disabled = true
-      doc1.classList.add("border-transparent")
-      doc1.classList.remove("border-1")
+     
+    
       doc2.classList.add("border-transparent")
       doc2.classList.remove("border-1")
-      doc1.classList.remove("border-indigo-700")
+      
       doc2.classList.remove("border-indigo-700")
    
           }
        
-
+          function standardActiveFunction(id) {
+            document.getElementById("standard-active-button-"+id).classList.add("hidden")
+            document.getElementById("standard-active-save-"+id).classList.remove("hidden")
+            document.getElementById("standard-active-undo-"+id).classList.remove("hidden")
+           var doc1 = document.getElementById("standard-active-"+id)
+          
+           doc1.disabled = false
+           
+           doc1.classList.remove("border-transparent")
+           doc1.classList.add("border-1")
+           
+          
+           doc1.classList.add("border-indigo-700")
+         
+          
+               }
+               function undoStandardActive(id) {
+            
+           
+            
+         
+               document.getElementById("standard-active-button-"+id).classList.remove("hidden")
+               document.getElementById("standard-active-save-"+id).classList.add("hidden")
+               document.getElementById("standard-active-undo-"+id).classList.add("hidden")
+              
+              var doc2 = document.getElementById("standard-active-"+id)
+              
+              doc2.disabled = true
+             
+            
+              doc2.classList.add("border-transparent")
+              doc2.classList.remove("border-1")
+              
+              doc2.classList.remove("border-indigo-700")
+           
+                  }
+               
+        
 
 
 </script>
