@@ -43,7 +43,7 @@ class ClientsController < ApplicationController
       else
         @month = params[:search][:month]
       end
-    if "#{@month},#{@year}".to_date > DateTime.now
+    if "#{@month},#{@year}" > DateTime.now.strftime("%B,%Y")
       flash[:danger] = "Cannot access upcoming dates"
      redirect_to session.delete(:previous_request_url)
     else
