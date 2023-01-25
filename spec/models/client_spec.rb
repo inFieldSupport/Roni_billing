@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Client, type: :model do
@@ -12,11 +14,9 @@ RSpec.describe Client, type: :model do
     it { should_not allow_value('email').for(:email) }
     it { should validate_presence_of(:name) }
     it { is_expected.to validate_length_of(:email).is_at_most(255) }
-
   end
-  describe "Associations" do
+  describe 'Associations' do
     it { should have_many(:users) }
     it { should have_many(:standards) }
-    
   end
 end

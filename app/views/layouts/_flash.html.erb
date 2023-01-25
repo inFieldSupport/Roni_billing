@@ -1,16 +1,29 @@
 <% flash.each do |message_type, message| %>
-    <div class="pt-3">
+    
       <% if message_type == "danger" %>
+      <div class="pt-3">
         <div id="flash" class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-gray-800 dark:text-red-400" role="alert">
           <span class="font-semibold font-serif"><%= message %></span>
        </div>
+       </div>
       <% end %>
       <% if message_type == "success" %>
+      <div class="pt-3">
        <div id="flash" class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-gray-800 dark:text-green-400" role="alert">
         <span class="font-semibold font-serif"><%= message %></span>
        </div>
+       </div>
       <% end %>
-   </div>
+  
   <% end %>
   
-  <script type="text/javascript">window.setTimeout("document.getElementById('flash').style.display='none';", 5000); </script>
+  <script type="text/javascript">
+  window.setTimeout("removeFlash()", 5000);
+  
+  function removeFlash() {
+    if(document.getElementById('flash')){
+    document.getElementById('flash').classList.add("hidden")
+    }
+  }
+
+  </script>

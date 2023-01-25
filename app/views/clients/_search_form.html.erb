@@ -1,0 +1,30 @@
+<div class="flex justify-between mx-2 bg-white mt-4 rounded-t-md" >
+   <div class="mx-2 p-6 fond-bold text-xl">
+        Date:
+        <% if !params[:search] %>
+        <%= DateTime.now.strftime("%B,%Y") %>
+        <%else%>
+                <%if params[:search][:month].present? %>
+                <%= params[:search][:month] %>
+                <%else%>
+                <%= DateTime.now.strftime("%B") %>
+                <%end%>,
+                <%if params[:search][:year].present? %>
+                <%= params[:search][:year] %>
+                <%else%>
+                <%= DateTime.now.strftime("%Y") %>
+                <%end%>
+        <%end%>
+
+        </div>
+   <div>
+   <%= form_with scope: :search, url: client_path(@client), method: :get, local: true,data:{turbo: false},class:"flex justify-between mx-2 mt-4 bg-white" do |f| %>
+        
+        <%=  f.select(:month,@months , {include_blank: "Month"},{class:"block w-36 border border-slate-400 md-white focus:bg-gray-100 focus:border-none rounded-md shadow-lg mr-4"}) %>
+        
+        <%=  f.select(:year,@years,{include_blank: "Year" }, {class:" block w-36 border border-slate-400 md-white focus:bg-gray-100 focus:border-none rounded-md shadow-lg mr-4"}) %>
+        <%= f.submit 'Search',class:"bg-indigo-600 hover:bg-indigo-700   rounded-md text-white mr-4 p-2" %>
+        </div>
+        
+        </div>
+        <%end%>

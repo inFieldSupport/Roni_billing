@@ -46,135 +46,13 @@
     <hr class="h-0.2 bg-slate-200 mx-12">
     <div class="p-9">
      <div class="flex flex-col mx-0 mt-8">
-      <table class="min-w-full  divide-slate-500">
-       <thead class="bg-slate-400 ">
-        <tr class="uppercase font-semibold">
-         <th  class="  font-semibold text-sm font-normal text-white p-4">
-          Date
-         </th>
-         <th class=" font-semibold  text-sm font-normal text-slate-700 text-white p-4">
-          Description
-         </th>
-         <th  class=" font-semibold text-sm font-normal  text-white p-4">
-          Quantity
-         </th>
-         <th  class=" font-semibold text-sm font-normal  text-white p-4">
-          Rate
-         </th>
-         <th  class=" font-semibold text-sm font-normal  text-white p-4">
-         Amount
-        </th>
-        </tr>
-       </thead>
-       <tbody>
-       <% @client.users.each do |user| %>
-        <tr class="border-b border-slate-200">
-         <td class=" text-sm sm:pl-6 md:pl-0 text-center">
-          <div class="font-medium text-slate-700"></div>
-          <div class="mt-0.5 text-slate-500 sm:hidden">
-           
-          </div>
-         </td>
-         <td class="hidden  py-4 text-sm text-center text-black font-semibold sm:table-cell">
-          <%= user.user_type %>
-         </td>
-         <td class="hidden  py-4 text-sm text-center text-slate-500 sm:table-cell">
-         <%= user.active_users %>
-         </td>
-         <td class="  text-sm text-center text-slate-500 sm:pr-6 md:pr-0">
-         <%= user.user_rate %>
-         </td>
-         <td class="  text-sm text-center text-slate-500 sm:pr-6 md:pr-0">
-         <%= ((user.active_users)*(user.user_rate)).round(2)  %>
-        </td>
-        
-        </tr>
-        <%end%>
-        <% @client.standards.each do |standard| %>
-          <tr class="border-b border-slate-200">
-           <td class=" text-sm sm:pl-6 md:pl-0 text-center">
-            <div class="font-medium text-slate-700"></div>
-            <div class="mt-0.5 text-slate-500 sm:hidden">
-             
-            </div>
-           </td>
-           <td class="hidden  py-4 text-sm text-center text-black font-semibold sm:table-cell">
-            <%= standard.standard_type %>
-           </td>
-           <td class="hidden  py-4 text-sm text-center text-slate-500 sm:table-cell">
-           <%= standard.active_users %>
-           </td>
-           <td class="  text-sm text-center text-slate-500 sm:pr-6 md:pr-0">
-           <%= standard.standard_rate %>
-           </td>
-           <td class="  text-sm text-center text-slate-500 sm:pr-6 md:pr-0">
-           <%= ((standard.active_users)*(standard.standard_rate)).round(2)  %>
-          </td>
-          
-          </tr>
-          <%end%>
-        
-     
-      </table>
-      <div class="grid grid-cols-2  m-4">
-          <div class="p-4">
-            Make all deposit checks payable to inField Clipboard Inc.,
-            otherwise all recurring payments will be processed via credit
-            card.
-            Send email transfers to billing@infieldclipboard.com.
-            Please contact us if you wish to pay via Direct Debit, or by
-            Credit Card, we will send an authorization form.
-          </div>
-          <div class="flex flex-col m-4 ml-6">
-            <div class="flex justify-between">
-              <p class="my-2">SUBTOTAL</p><p><%= subtotal = @client.calculate_subtotal(@client.calculate_user_bill(@client),@client.calculate_standard_bill(@client)) %></p>
-            </div>
-            <div class="flex justify-between">
-              <p  class="my-2">HST (ON) @ 13% </p><p><%= tax = @client.calculate_tax(subtotal) %></p>
-            </div>
-            <div class="flex justify-between">
-              <p  class="my-2">TOTAL</p><p><%= tax+subtotal %></p>
-            </div>
-            <div class="p-4">
-            
-          </div>
-          <div class="bg-slate-400 flex justify-between mt-12 text-white p-4">
-            <p class="text-lg ">Total Due</p>
-            <p class="text-2xl font-bold">$<%= tax+subtotal %></p>
-           
-            
-
-
-          </div>
-      </div>
+      <%= render "bills/table" %>
+      <%= render "bills/total_due" %>
       
   
       </div>
       <div class="flex flex-col">
-      <p class="text-xl font-bold">Tax Summary</p>
-      <table class="w-full  divide-slate-500">
-       <thead class="bg-slate-400 ">
-        <tr class="uppercase font-semibold">
-         <th  class="  font-semibold text-sm font-normal text-white p-4">
-          RATE
-         </th>
-         <th  class=" font-semibold text-sm font-normal  text-white p-4">
-         TAX 
-         </th>
-         <th  class=" font-semibold text-sm font-normal  text-white p-4">
-         NET
-        </th>
-        </tr>
-       </thead>
-       <tbody>
-       <tr>
-       <td class=" font-semibold text-sm font-normal text-center p-4">HST (ON) @ 13%</td>
-       <td class=" font-semibold text-sm font-normal  text-center p-4"><%= tax %></td>
-       <td class=" font-semibold text-sm font-normal  text-center p-4"> <%= subtotal %> </td>
-       </tr>
-       </tbody>
-
-       </table>
+      <%= render "bills/tax_summary" %>
      </div>
  
     </div>

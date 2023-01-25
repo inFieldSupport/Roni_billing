@@ -1,9 +1,29 @@
-standard_type,standard_rate,active_users,company_name
-Telematics,13.44,35,Mobile Mech
-Accounting,280.00,1,Mobile Mech
-Bin Monitoring,289.32,1,Daniels
-SMS Delivery,5.00,1,Daniels
-Bin Module,112.00,1,Talize Inc
-Bin Monitoring,11.20,40,Talize Inc
-Routing,16.80,4,Talize Inc
-Telematics,22.00,3,Goodmark
+standard_type,standard_rate,active_users,company_name,month,year
+Telematics,13.44,35,Mobile Mech,January,2023
+Accounting,280.00,1,Mobile Mech,January,2023
+Bin Monitoring,289.32,1,Daniels,January,2023
+SMS Delivery,5.00,1,Daniels,January,2023
+Bin Module,112.00,1,Talize Inc,January,2023
+Bin Monitoring,11.20,40,Talize Inc,January,2023
+Routing,16.80,4,Talize Inc,January,2023
+Telematics,22.00,3,Goodmark,January,2023
+Telematics,13.44,35,Mobile Mech,December,2022
+Telematics,14.44,30,A&G,December,2022
+Accounting,260.00,1,A&G,December,2022
+Accounting,280.00,1,Mobile Mech,December,2022
+Bin Monitoring,289.32,1,Daniels,December,2022
+SMS Delivery,5.00,1,Daniels,December,2022
+Bin Module,112.00,1,Talize Inc,December,2022
+Bin Monitoring,11.20,40,Talize Inc,December,2022
+Routing,16.80,4,Talize Inc,December,2022
+Telematics,22.00,3,Goodmark,December,2022
+Telematics,13.44,35,Mobile Mech,November,2022
+Telematics,14.44,30,A&G,November,2022
+Accounting,300.00,1,A&G,November,2022
+Accounting,280.00,1,Mobile Mech,November,2022
+Bin Monitoring,289.32,1,Daniels,November,2022
+SMS Delivery,5.00,1,Daniels,November,2022
+Bin Module,112.00,1,Talize Inc,November,2022
+Bin Monitoring,11.20,40,Talize Inc,November,2022
+Routing,19.80,5,Talize Inc,November,2022
+Telematics,22.00,3,Goodmark,November,2022
