@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: billing_production
-  username: billing
-  password: <%= ENV["BILLING_DATABASE_PASSWORD"] %>
+  url: <%= ENV["BILLING_DATABASE_URL"] %>
