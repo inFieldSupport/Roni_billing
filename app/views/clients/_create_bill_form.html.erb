@@ -1,35 +1,20 @@
-<%if params[:search] %>
-        <% if !@client.bills.where(year:params[:search][:year],month:params[:search][:month]).any? %>
+
+        <% if !@client.bills.find_by(year:@year,month:@month) %>
         
-                <%if @client.users.where(year:params[:search][:year],month:params[:search][:month]).any? || @client.standards.where(year:params[:search][:year],month:params[:search][:month]).any? %>
+                <%if @client.users.where(year:@year,month:@month).any? || @client.standards.where(year:@year,month:@month).any? %>
                 <div class="flex justify-center text-center items-center bg-white mb-10 p-2" style="margin: 0 7px 2rem 7px">
                 <h1 class="text-xl font-semibold mr-2">Create the client's bill ?</h1>
-                <%= button_to "Create",bills_path(client_id:@client.id,employee_id:current_user.id,year:params[:search][:year],month:params[:search][:month]),class:"bg-indigo-600 rounded-md ml-2 text-white p-2" %>
+                <%= button_to "Create",bills_path(client_id:@client.id,employee_id:current_user.id,year:@year,month:@month),class:"bg-indigo-600 rounded-md ml-2 text-white p-2" %>
                 </div>
                 <%end%>
         
         <%else%>
         <div class="flex justify-center text-center items-center bg-white mb-10 p-2" style="margin: 0 7px 2rem 7px">
                 <h1 class="text-xl font-semibold mr-2">Bill already created for this month</h1>
-                <%= link_to "View",bill_path(@client.bills.find_by(year:params[:search][:year],month:params[:search][:month])),class:"bg-indigo-600 rounded-md ml-2 text-white p-2" %>
+                <%= link_to "View",bill_path(@client.bills.find_by(year:@year,month:@month)),class:"bg-indigo-600 rounded-md ml-2 text-white p-2" %>
         </div>
         <%end%>
-<%else%>
-   <% if !@client.bills.where(year:DateTime.now.strftime("%Y"),month:DateTime.now.strftime("%B")).any?  %>
-   
-   <%if @client.users.where(year:DateTime.now.strftime("%Y"),month:DateTime.now.strftime("%B")).any? || @client.standards.where(year:DateTime.now.strftime("%Y"),month:DateTime.now.strftime("%B")).any? %>
-   <div class="flex justify-center text-center items-center bg-white mb-10 p-2" style="margin: 0 7px 2rem 7px">
-   <h1 class="text-xl font-semibold mr-2">Create the client's bill ?</h1>
-   <%= button_to "Create",bills_path(client_id:@client.id,employee_id:current_user.id,year:DateTime.now.strftime("%Y"),month:DateTime.now.strftime("%B")),class:"bg-indigo-600 rounded-md ml-2 text-white p-2" %>
-   </div>
-   <%end%>
-   
-   <%else%>
-   <div class="flex justify-center text-center items-center bg-white mb-10 p-2" style="margin: 0 7px 2rem 7px">
-   <h1 class="text-xl font-semibold mr-2">Bill already created for this month</h1>
-   <%= link_to "View",bill_path(@client.bills.find_by(year:DateTime.now.strftime("%Y"),month:DateTime.now.strftime("%B"))),class:"bg-indigo-600 rounded-md ml-2 text-white p-2" %>
-   </div>
-   <%end%>
-<% end%>
+
+
    
   
