@@ -19,24 +19,3 @@ CSV.foreach(Rails.root.join('lib/csv/clients.csv'), headers: true) do |row|
                   email: "client-#{row[1]}@gmail.com"
                 })
 end
-CSV.foreach(Rails.root.join('lib/csv/user.csv'), headers: true) do |row|
-  client = Client.find_by(company_name: row[3])
-  client.users.create(
-    user_type: row[0],
-    user_rate: row[1],
-    active_users: row[2],
-    registered_users: row[4],
-    month: row[5],
-    year: row[6]
-  )
-end
-CSV.foreach(Rails.root.join('lib/csv/standard.csv'), headers: true) do |row|
-  client = Client.find_by(company_name: row[3])
-  client.standards.create(
-    standard_type: row[0],
-    standard_rate: row[1],
-    active_users: row[2],
-    month: row[4],
-    year: row[5]
-  )
-end
