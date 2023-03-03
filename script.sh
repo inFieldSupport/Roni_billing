@@ -1,13 +1,16 @@
 #!/bin/bash
 ################################ Orhma Company##################################
+# Create temporary database
 PGPASSWORD=password psql -U postgres -c "CREATE DATABASE temporary_database;"
+# Restore data from Orhma backup
 PGPASSWORD=password psql -U postgres -d temporary_database < orhma_backup.sql
-
+# Get user count ordered by role
 sql="SELECT role,COUNT(*) FROM users Group by role Order by role desc"
 psql_output=$(PGPASSWORD=password psql -U postgres -d temporary_database -c "$sql")
+# save result in user_array
 readarray -t user_array <<<"$psql_output"
 unset user_array[-1]
-
+# Select client Orhma from the billing app database
 sql="SELECT * FROM clients WHERE company_name = 'ORHMA';"
 psql_output=$(PGPASSWORD=password psql -U postgres -d billing_development -c "$sql")
 readarray -t client_array <<<"$psql_output"
@@ -19,9 +22,11 @@ readarray -t client_array <<<"$psql_output"
 
  current_month=$(date +"%B")
  current_year=$(date +%Y)
+  #Create roles array
  declare -A roles
+
  roles=([admin]=1 [super_admin]=2 [contact]=3 [technician]=4 [office_staff]=5 [sub_contractor]=6 [mechanic]=7 [dispacher]=8)
- 
+ # Insert users into billing app
 for element in "${user_array[@]:2}"
 do
     old_ifs=$IFS
@@ -63,7 +68,7 @@ VALUES ('$user_role', 20.5, $users_nb,$users_nb,'$current_month',$current_year,$
     PGPASSWORD=password psql -U postgres -d billing_development -c "$sql"
 done
 
-# Rest of the empty roles
+# Insert Rest of the empty roles
 for r in ${!roles[@]}
 do
 
@@ -92,19 +97,22 @@ esac
 VALUES ('$user_role',0,0,0,'$current_month',$current_year,$id,'$created_at','$updated_at');"
     PGPASSWORD=password psql -U postgres -d billing_development -c "$sql"
 done
-
+# Drop the temporary database
 PGPASSWORD=password psql -U postgres -c "DROP DATABASE temporary_database;"
-
+###################################################################################
 
 ################################ Eastwing Company##################################
+# Create temporary database
 PGPASSWORD=password psql -U postgres -c "CREATE DATABASE temporary_database;"
+# Restore data from Eastwing backup
 PGPASSWORD=password pg_restore -U postgres -d temporary_database -v eastwing_backup.tar
-
+# Get user count ordered by role
 sql="SELECT role,COUNT(*) FROM users Group by role Order by role desc"
 psql_output=$(PGPASSWORD=password psql -U postgres -d temporary_database -c "$sql")
+# save result in user_array
 readarray -t user_array <<<"$psql_output"
 unset user_array[-1]
-
+# Select client Eastwing from the billing app database
 sql="SELECT * FROM clients WHERE company_name = 'Eastwing';"
 psql_output=$(PGPASSWORD=password psql -U postgres -d billing_development -c "$sql")
 readarray -t client_array <<<"$psql_output"
@@ -116,9 +124,10 @@ readarray -t client_array <<<"$psql_output"
 
  current_month=$(date +"%B")
  current_year=$(date +%Y)
+ #Create roles array
  declare -A roles
  roles=([admin]=1 [super_admin]=2 [contact]=3 [technician]=4 [office_staff]=5 [sub_contractor]=6 [mechanic]=7 [dispacher]=8)
- 
+ # Insert users into billing app
 for element in "${user_array[@]:2}"
 do
     old_ifs=$IFS
@@ -160,7 +169,7 @@ VALUES ('$user_role', 20.5, $users_nb,$users_nb,'$current_month',$current_year,$
     PGPASSWORD=password psql -U postgres -d billing_development -c "$sql"
 done
 
-# Rest of the empty roles
+# Insert rest of the empty roles
 for r in ${!roles[@]}
 do
 
@@ -189,18 +198,22 @@ esac
 VALUES ('$user_role',0,0,0,'$current_month',$current_year,$id,'$created_at','$updated_at');"
     PGPASSWORD=password psql -U postgres -d billing_development -c "$sql"
 done
-
+# Drop temporary database
 PGPASSWORD=password psql -U postgres -c "DROP DATABASE temporary_database;"
+##################################################################################
 
 ################################ ID Mech Company##################################
+# Create temporary database
 PGPASSWORD=password psql -U postgres -c "CREATE DATABASE temporary_database;"
+# Restore data from ID Mech backup
 PGPASSWORD=password pg_restore -U postgres -d temporary_database -v idmech_backup.tar
-
+# Get user count ordered by role
 sql="SELECT role,COUNT(*) FROM users Group by role Order by role desc"
 psql_output=$(PGPASSWORD=password psql -U postgres -d temporary_database -c "$sql")
+# save result in user_array
 readarray -t user_array <<<"$psql_output"
 unset user_array[-1]
-
+# Select client ID Mech from the billing app database
 sql="SELECT * FROM clients WHERE company_name = 'ID Mech';"
 psql_output=$(PGPASSWORD=password psql -U postgres -d billing_development -c "$sql")
 readarray -t client_array <<<"$psql_output"
@@ -212,9 +225,10 @@ readarray -t client_array <<<"$psql_output"
 
  current_month=$(date +"%B")
  current_year=$(date +%Y)
+ #Create roles array
  declare -A roles
  roles=([admin]=1 [super_admin]=2 [contact]=3 [technician]=4 [office_staff]=5 [sub_contractor]=6 [mechanic]=7 [dispacher]=8)
- 
+ # Insert users into billing app
 for element in "${user_array[@]:2}"
 do
     old_ifs=$IFS
@@ -256,7 +270,7 @@ VALUES ('$user_role', 20.5, $users_nb,$users_nb,'$current_month',$current_year,$
     PGPASSWORD=password psql -U postgres -d billing_development -c "$sql"
 done
 
-# Rest of the empty roles
+# Insert rest of the empty roles
 for r in ${!roles[@]}
 do
 
@@ -285,6 +299,7 @@ esac
 VALUES ('$user_role',0,0,0,'$current_month',$current_year,$id,'$created_at','$updated_at');"
     PGPASSWORD=password psql -U postgres -d billing_development -c "$sql"
 done
-
+# Drop temporary database
 PGPASSWORD=password psql -U postgres -c "DROP DATABASE temporary_database;"
+##################################################################################
  
